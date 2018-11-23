@@ -66,6 +66,31 @@ body {
   top: 25%;
   width:100%;
   }
+
+.map-item.Shinde {
+  top: 1% !important;
+}
+
+.map-item.Shinde.Enclave {
+  top: 12.5% !important;
+}
+
+.map-item.Footsteps {
+  top: 24% !important;
+}
+
+.bracket {
+  top: 17%;
+  height: 19%;
+}
+
+.bracket:before {
+  top: -60%;
+  }
+
+.bracket:after {
+  height: 65%;
+  }
 	
 } /*===========768===========*/
 
@@ -167,6 +192,77 @@ section.camp-gallery {
 .tabs li.nav-item .thin-arrow {
 	display: none;
 }
+
+.map-item:before {
+	top: 5px;
+	left: 10px;
+	height: 20px;
+}
+
+.map-item .icon {
+  width: 20px;
+  height: 20px;
+  box-shadow: none;
+  border:none;
+  }
+
+.map-item .icon span {
+  top: 4px;
+  left: 5px;
+  }
+
+.map-item .icon:after {
+  top: 9px;
+  left: 6px;
+  width: 8px;
+  height: 5px;
+  }
+
+.map-item p {
+  padding-left: 40px;
+  font-size: .55em;
+  line-height: 30px;
+  }
+
+.map-item a {
+  padding: 3px 5px;
+  margin-left: 1.5em;  
+    font-size: .55em;
+  }
+
+.map-item a span {
+	display: none;
+}
+
+.map-item .icon:before {
+  right: -15px;
+  }
+
+.map-item:hover:before {
+  width: 95%;
+}
+
+.map-item.Shinde {
+  top: 5% !important;
+}
+
+.map-item.Shinde.Enclave {
+  top: 15% !important;
+}
+
+.map-item.Footsteps {
+  top: 25% !important;
+}
+
+.bracket {
+  top: 21%;
+  height: 15%;
+}
+
+.bracket:after,
+.bracket:before {
+  right: -1px;
+  }
 	
 } /*===========576===========*/
 

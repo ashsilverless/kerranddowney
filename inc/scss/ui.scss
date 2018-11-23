@@ -758,14 +758,18 @@ p.supporting {
 .map-wrapper {
   position: relative;
   overflow: hidden;
+  
+  	&:hover > .map {
+		opacity:0.6;
+	}
 }
 
 .map {
-  position:relative
-    ;
+  position:relative;
   top:0;
   left:0;
   width:100%; 
+	transition: opacity 1s ease;
 }
 
 .map-item {
@@ -884,16 +888,6 @@ p.supporting {
   
 }
 
-.map-item:nth-of-type(1) {
-  top:5%;
-  left:10%;
-}
-
-.map-item:nth-of-type(2) {
-  top:35%;
-  left:50%;
-}
-
 .map-item a span {
     position: absolute;
     top: 19px;
@@ -920,5 +914,46 @@ p.supporting {
   }
 }
 
+.bracket {
+  content: '';
+  position: absolute;
+  top: 27%;
+  left: 21%;
+  width: 27%;
+  height: 10%;
+  border-left: 3px solid hsl(93, 10%, 21%);
+  border-top: 3px solid hsl(93, 10%, 21%);
 
+  &:before {
+	content: '';
+	position: absolute;
+	top: -80%;
+	right: 0;
+	width: 4%;
+	height: 80%;
+	border-left: 3px solid hsl(93, 10%, 21%);
+	border-top: 3px solid hsl(93, 10%, 21%);
+  }
+  
+  &:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 4%;
+	height: 80%;
+	border-left: 3px solid hsl(93, 10%, 21%);
+	border-bottom: 3px solid hsl(93, 10%, 21%);
+  }
+}
 
+.bracket-dot {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: -7px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: hsl(93, 10%, 21%);
+}
