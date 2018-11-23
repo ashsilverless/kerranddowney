@@ -1,2 +1,101 @@
 /* =========== MEDIA ============ */
-/*=1200=*/
+@media only screen and (max-width: 1200px) {
+  /*------MEDIUM DESKTOP------*/
+  .logo {
+    width: 200px; }
+  .sl-hero.full {
+    max-height: 50vh; }
+  .sl-hero.half {
+    height: 33vh; }
+  .sl-hero.one-third {
+    height: 25vh;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 5em; }
+  section.camp-gallery .image-item {
+    height: 15em; } }
+
+/*===========1200===========*/
+@media only screen and (max-width: 992px) {
+  /*------SMALL DESKTOP / IPAD PRO------*/
+  section.camp-gallery .image-item {
+    height: 10em; } }
+
+/*===========992===========*/
+@media only screen and (max-width: 768px) {
+  /*------TABLET------*/
+  body {
+    font-size: 11px; }
+  .logo {
+    width: 150px; }
+  .sl-hero h1 {
+    font-size: 2em; }
+  .subscribe span.submit-button:before {
+    top: calc(1em + 3px);
+    right: 1em;
+    width: 2em; }
+  .subscribe span.submit-button:after {
+    top: calc(1em + 0px);
+    right: calc(1em + -3px); }
+  .tabs li.nav-item h2 {
+    top: 25%;
+    width: 100%; } }
+
+/*===========768===========*/
+@media only screen and (max-width: 576px) {
+  /*------MOBILE------*/
+  body {
+    font-size: 10px; }
+  .logo {
+    width: 150px; }
+  .camp-nav-wrapper {
+    display: none; }
+  .sl-hero.one-third {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+  .sl-hero.half .content-wrapper {
+    margin-bottom: 1em; }
+  .image-tile:after {
+    padding-bottom: 15em; }
+  .image-tile.large .content-wrapper {
+    padding: 1em; }
+  .subscribe {
+    padding: 1em; }
+    .subscribe .form-group,
+    .subscribe .wpcf7-form-control {
+      width: 100%; }
+    .subscribe span.submit-button {
+      float: none;
+      width: 50%; }
+      .subscribe span.submit-button .form-group {
+        margin-bottom: 0; }
+  .contact-cta {
+    margin-top: 5em;
+    text-align: center; }
+    .contact-cta .text-right {
+      text-align: center !important; }
+  .final-element {
+    margin-bottom: 5em; }
+  .features {
+    text-align: justify; }
+  section.camp-gallery {
+    margin: 5em 0; }
+    section.camp-gallery .image-item {
+      height: 20em; }
+  .contact-details {
+    margin-left: 2em; }
+  #main .main-form {
+    padding: 2em; }
+  #myTab {
+    padding: 0 1.25em; }
+  .nav-link {
+    padding: 0 0.25em; }
+  .tabs li.nav-item h2 {
+    font-size: 0.85em;
+    padding: 0 5px; }
+  .tabs li.nav-item .thin-arrow {
+    display: none; } }
+
+/*===========576===========*/
