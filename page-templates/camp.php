@@ -16,7 +16,7 @@ get_header();?>
 
 <?php get_template_part( 'template-parts/sable', 'head' );?>	
 
-<?php get_template_part( 'template-parts/content', 'section' );?>	
+<?php get_template_part( 'template-parts/camp', 'leader' );?>	
 
     <div class="container">
 	
