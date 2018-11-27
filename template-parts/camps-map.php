@@ -1,5 +1,6 @@
 <section class="map-wrapper">
 
+<div class="positioning-wrapper">
 	<img src="<?php echo get_stylesheet_directory_uri(); ?>/inc/img/footer-map-1.jpg" class="map">
 
 	<div class="bracket">
@@ -23,5 +24,5 @@
 <?php   endwhile;?>
 
 <?php   endif;?>
-
+</div>
 </section>
