@@ -453,6 +453,30 @@ hr {
 	margin-top: 10em;
 }
 
+.sub-menu-content .content {
+		
+	ul {
+		margin:0;
+		padding-left: 2em;
+	}	
+	li {
+		position: relative;
+		margin-bottom: 0.75em;
+		list-style-type: none;
+		
+		&:before {
+		  content: '';
+		  position: absolute;
+		  width: 5px;
+		  height: 5px;
+		  background: hsl(90, 3%, 49%);
+		  left: -2em;
+		  top: 7px;
+		}
+	}
+}
+
+
 .seasons img {
 	display: block;
 	width: 30px;

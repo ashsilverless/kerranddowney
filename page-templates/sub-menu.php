@@ -24,7 +24,7 @@ get_header();?>
 				
 	        </div>
 	        
-	        <div class="col-lg-7 offset-lg-1 col-sm-9">
+	        <div class="col-lg-7 offset-lg-1 col-sm-9 content">
 
 			<h2><?php the_field('heading'); ?></h2>
 			<?php the_field('copy'); ?>
