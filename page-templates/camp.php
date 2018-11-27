@@ -36,7 +36,7 @@ get_header();?>
 
 	        </div><!--col-4-->
 
-	        <div class="col-lg-5 col-sm-7"> 
+	        <div class="col-lg-5 col-sm-7 camp-description"> 
 
 				<?php the_field('description'); ?>
 				
