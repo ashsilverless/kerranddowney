@@ -82,7 +82,7 @@ get_header();?>
 	        
 	        <div class="col-lg-6 offset-lg-1 col-sm-8 main-form">
 				<h2>Contact Us</h2>
-				<p>	<?php echo do_shortcode('[contact-form-7 id="455" title="Contact Page Form"]');?></p>
+				<p>	<?php the_field('introduction_text'); ?></p>
 				<div class="sl-form-wrapper">
 					<?php echo do_shortcode('[contact-form-7 id="455" title="Contact Page Form"]');?>
 				</div>
