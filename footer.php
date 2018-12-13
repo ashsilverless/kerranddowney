@@ -28,6 +28,18 @@
 
 	<?php echo do_shortcode('[contact-form-7 id="583" title="test"]');?>
 
+<div class="row justify-content-center">
+
+		<?php if( have_rows('accreditations', 'option') ): ?>	
+		
+				<?php while ( have_rows('accreditations', 'option') ) : the_row(); ?>
+		        <div class="col-sm-1">
+					<img src="<?php the_sub_field('image'); ?>" />
+		        </div>
+				<?php   endwhile;?>
+				
+			<?php   endif;?>
+</div>
 		</div>
 	</div>
 
@@ -37,7 +49,7 @@
 			<div class="col-sm-6 offset-sm-3">
 				<a href="/terms" class="mandatory">T&C</a>
 				<a href="/privacy" class="mandatory">Privacy</a>					
-				&copy; Ker & Downey <?php echo date ('Y');?>
+				&copy; Ker & Downey Botswana <?php echo date ('Y');?>
 				<div class="footer-social">		
 					<?php get_template_part( 'template-parts/social', 'links' );?>	
 				</div>

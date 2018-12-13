@@ -1043,7 +1043,7 @@ p.submit + .form-group,
 .right-col .form-group:nth-of-type(1) {
 	position: relative;
 	
-	&:after {
+	/*&:after {
 		content: '';
 		position: absolute;
 		bottom: -53px;
@@ -1054,7 +1054,7 @@ p.submit + .form-group,
 		background-size: cover;
 		background-repeat: no-repeat;
 		opacity:0.7;
-	}
+	}*/
 }
 
 #main input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.form-control,
