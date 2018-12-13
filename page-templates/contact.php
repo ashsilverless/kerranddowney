@@ -82,7 +82,7 @@ get_header();?>
 	        
 	        <div class="col-lg-6 offset-lg-1 col-sm-8 main-form">
 				<h2>Contact Us</h2>
-				<p>The company is Botswana based and it's operational offices and reservations offices are run from the tourism hub of Maun.</p>
+				<p>	<?php echo do_shortcode('[contact-form-7 id="455" title="Contact Page Form"]');?></p>
 				<div class="sl-form-wrapper">
 					<?php echo do_shortcode('[contact-form-7 id="455" title="Contact Page Form"]');?>
 				</div>
