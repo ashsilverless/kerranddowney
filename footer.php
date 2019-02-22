@@ -54,7 +54,7 @@
 					<?php get_template_part( 'template-parts/social', 'links' );?>	
 				</div>
 				<div class="credit">
-					<a href="https://silverless.co.uk/" target="_blank">By Silverless</a></div>
+					<a href="https://silverless.co.uk/" target="_blank" rel="noopener">By Silverless</a></div>
 				</div>
 		</div>
 	</div>	
