@@ -33,7 +33,7 @@
 		<?php if( have_rows('accreditations', 'option') ): ?>	
 		
 				<?php while ( have_rows('accreditations', 'option') ) : the_row(); ?>
-		        <div class="col-sm-1">
+		        <div class="col-md-1 col-2">
 					<img src="<?php the_sub_field('image'); ?>" />
 		        </div>
 				<?php   endwhile;?>
