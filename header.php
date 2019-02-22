@@ -10,6 +10,7 @@
 <head>
 	<meta charset="utf8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Description" content="Ker & Downey, Botswana.  Luxury Safari Pioneers.">
 	<link rel="stylesheet" href="https://use.typekit.net/cky6efi.css">
   <link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon-16x16.png" sizes="16x16" />

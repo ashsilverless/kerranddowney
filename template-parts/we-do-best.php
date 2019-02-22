@@ -11,7 +11,7 @@
 	<?php while ( have_rows('small_leaders', 'option') ) : the_row(); ?>
 
 		<div class="col-sm-4">
-		<a href="<?php the_sub_field('link_target');?>">	
+		<a href="<?php the_sub_field('link_target');?>"><span style="position: absolute;">Safaris</span>	
 			
 			<div class="image-tile" style="background-image: url(<?php the_sub_field('image'); ?>);">		
 			
