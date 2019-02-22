@@ -445,6 +445,10 @@ hr {
 	}
 }
 
+.current-menu-parent > .sub-menu {
+    display: block !important;
+}
+
 .sub-menu-content {
 	margin-top:3em;
 }
