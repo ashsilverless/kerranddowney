@@ -34,23 +34,27 @@ get_header();?>
 					<p><i class="far fa-compass"></i>Ker & Downey Botswana<br/><?php the_field('office_address', 'option'); ?></p>
 	        
 	       <h3>Our Partners</h3> 
-	        
-			<?php if( have_rows('representatives', 'option') ): ?>
-				<div class="sl-accordion reps" role="tablist">
-					<?php $i=1; while ( have_rows('representatives', 'option') ) : the_row(); ?>
-						<div class="sl-card">
-						    <div class="sl-card-header" role="tab" id="heading-<?php echo $i; ?>">
-						      <a data-toggle="collapse" href="#collapse-<?php echo $i; ?>" aria-expanded="" aria-controls="collapseOne">
-							      <p class="mb-0"><strong>
-						        
-						         <?php the_sub_field('title'); ?>
-						       <span></span>
-							      </strong></p></a>
-						    </div>
-						    <div id="collapse-<?php echo $i; ?>" class="collapse <?php the_field('expand'); ?>" role="tabpanel" data-parent="#accordion" aria-labelledby="heading-<?php echo $i; ?>">
-						      <div class="sl-card-body">
-						       	
-						       	<p><i class="fas fa-user-alt"></i><?php the_sub_field('name'); ?></p>
+
+            <div class="toggle-wrapper">
+            <?php if( have_rows('representatives', 'option') ): 	
+                $i = 0; 
+            		while ( have_rows('representatives', 'option') ) : the_row(); 
+                $i++;?>
+                
+            <div class="toggle reps mb2">
+            
+              <div class="toggle__question" role="tab">    
+                  <p class="headingSupporting headingSupporting__sm">
+                    
+                    <h5 class="mb-0">
+                        <?php the_sub_field('title'); ?>
+            			<span></span>
+            		</h5>
+                  </p>
+              </div>
+            
+              <div class="toggle__answer" role="tabpanel">
+                <p><i class="fas fa-user-alt"></i><?php the_sub_field('name'); ?></p>
 						       	
 						       	<?php if( get_sub_field('web_address') ): ?>
 						       		<p><i class="fas fa-globe-africa"></i><a href="<?php the_sub_field('web_address'); ?>" target="_blank"><?php the_sub_field('web_address'); ?></a></p>
@@ -65,18 +69,16 @@ get_header();?>
 						       	<?php endif;?>							       		
 						       		
 						       	<p><?php the_sub_field('copy'); ?></p>
-						       	
-						      </div>
-						    </div>
-						</div>
-					<?php $i++; endwhile; ?>
-				</div>
-			<?php endif; ?>	        
-	        
-	        
-	        
-	        
-	        
+              </div>
+            
+            </div>
+            		
+            <?php 
+              $tCount = $i;
+              endwhile; 
+              endif;
+            ?>
+            </div><!--togglewrapper-->
 	        
 	        </div>
 	        

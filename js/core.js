@@ -94,6 +94,11 @@ $('#checker').change(function(){
     }
 });
 
+    $(".toggle").click(function() {   
+      	$('.toggle.active').removeClass("active"); 
+        $(this).addClass("active");   
+    });
+
 
 (function($) {
 

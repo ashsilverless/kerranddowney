@@ -130,7 +130,7 @@ function slmaster_scripts() {
 	
 	wp_enqueue_script( 'slmaster-bootstrap-jquery', 'https://code.jquery.com/jquery-3.2.1.slim.min.js', true );
 	
-	wp_enqueue_script( 'slmaster-bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', true );
+	wp_enqueue_script( 'slmaster-bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js', true );
 	
 	wp_enqueue_script( 'slmaster-bootstrap-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', true );
 	

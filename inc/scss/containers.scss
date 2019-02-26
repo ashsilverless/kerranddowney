@@ -445,6 +445,113 @@ hr {
 	}
 }
 
+.toggle {
+
+    &__question {
+        position: relative;
+        
+        &:hover {
+            cursor: pointer;
+        }
+    
+        p {
+            position: relative;
+        
+            span {
+                position: absolute;
+                left: -3em;
+            }
+        }
+    
+    span {
+				position: absolute;
+				top:5px;
+				right:0;
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				border: 2px solid white;
+				border-radius: 50%;
+				overflow: hidden;
+				transition: all .5s ease;
+				
+					&::before, 
+					&::after {
+						content: '';
+						position: absolute;
+						height: 2px;
+						width: 80%;
+						top: 50%;
+						left: 10%;
+						margin-top: -1px;
+						background: #fff;
+					}
+					
+					&::after {
+						transform: rotate(-90deg);
+					}
+					
+					&.big {
+						transform: scale(3);
+					}
+				}
+    
+    
+    
+        i {
+            position: absolute;
+            right: -2em;
+            transform: rotate(45deg);  
+            transition: all .5s ease;
+        }  
+    }
+    
+    &__answer {
+        max-height: 0;
+        border-bottom: 1px solid white;
+		padding: 1em 0;
+        overflow: hidden;
+        transition:max-height .5s ease;
+    }
+}
+
+.toggle.active {
+
+    .toggle__question span {
+        transform:rotate(45deg);
+    }
+
+    .toggle__question i {
+        transform: rotate(0deg);
+    }
+
+    .toggle__answer {
+        max-height: 100vh;
+    }
+    
+}
+
+.toggle.reps {
+ 
+    .toggle__answer {  
+        padding: 0;
+    }
+    
+    h5 {
+        font-family: "noto-sans", sans-serif;
+        font-size: 1em;
+        font-weight: 900;
+    }
+
+    span {
+        top:0;
+        width: 15px;
+        height: 15px;
+        border: none;  
+    }
+}
+
+
 .current-menu-parent > .sub-menu {
     display: block !important;
 }
@@ -847,9 +954,9 @@ video {
 	position: relative;
 	
 	svg {
-	  position: absolute;
+	  position: relative;
 	  top: 3px;
-	  left: -2em;
+	  margin-right: 10px;
 	  font-size: 1em;
 	  color: hsl(0, 0%, 19%);
 	  line-height: 1em;

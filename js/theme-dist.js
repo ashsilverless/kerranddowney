@@ -254,6 +254,11 @@ jQuery(document).ready(function ($) {
 		}
 	});
 
+	$(".toggle").click(function () {
+		$('.toggle.active').removeClass("active");
+		$(this).addClass("active");
+	});
+
 	(function ($) {
 
 		$.fn.visible = function (partial) {
