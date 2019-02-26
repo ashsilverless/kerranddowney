@@ -28,32 +28,41 @@ get_header();?>
 
 			<div class="col-lg-7 offset-lg-1 col-sm-8">
 			
-			<div class="introduction">
+			<div class="introduction mb3">
 				<h2><?php the_field('heading'); ?></h2>
 				<?php the_field('copy'); ?>
 			</div>
-			
-			<?php if( have_rows('toggle') ): ?>
-				<div class="sl-accordion" role="tablist">
-					<?php $i=1; while ( have_rows('toggle') ) : the_row(); ?>
-						<div class="sl-card">
-						    <div class="sl-card-header" role="tab" id="heading-<?php echo $i; ?>">
-						      <a data-toggle="collapse" href="#collapse-<?php echo $i; ?>" aria-expanded="" aria-controls="collapseOne"><h5 class="mb-0">
-						        
-						         <?php the_sub_field('question'); ?>
-						       <span></span>
-						      </h5> </a>
-						    </div>
-						    <div id="collapse-<?php echo $i; ?>" class="collapse <?php the_field('expand'); ?>" role="tabpanel" data-parent="#accordion" aria-labelledby="heading-<?php echo $i; ?>">
-						      <div class="sl-card-body">
-						       	<?php the_sub_field('answer'); ?>
-						      </div>
-						    </div>
-						</div>
-					<?php $i++; endwhile; ?>
-				</div>
-			<?php endif; ?>
 
+            <div class="toggle-wrapper long">
+            <?php if( have_rows('toggle') ): 	
+                $i = 0; 
+            		while ( have_rows('toggle') ) : the_row(); 
+                $i++;?>
+                
+            <div class="toggle">
+            
+              <div class="toggle__question" role="tab">    
+                  <p class="headingSupporting headingSupporting__sm">
+                    
+                    <h5 class="mb-0">
+                        <?php the_sub_field('question'); ?>
+            			<span></span>
+            		</h5>
+                  </p>
+              </div>
+            
+              <div class="toggle__answer" role="tabpanel">
+                <p><?php the_sub_field('answer'); ?></p>
+              </div>
+            
+            </div>
+            		
+            <?php 
+              $tCount = $i;
+              endwhile; 
+              endif;
+            ?>
+            </div><!--togglewrapper-->
 
 			</div>
 

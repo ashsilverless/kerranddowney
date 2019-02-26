@@ -50,6 +50,14 @@
 	overflow: hidden;
 }
 
+.mb2 {
+    margin-bottom: 2em;
+}
+
+.mb3 {
+    margin-bottom: 3em;
+}
+
 /* =========== HEADER ============ */
 .top-grad {
     content: '';
@@ -528,8 +536,15 @@ hr {
     .toggle__answer {
         max-height: 100vh;
     }
-    
+ 
 }
+
+.long .active {
+    .toggle__answer {
+        max-height: 300vh;
+    }        
+}   
+
 
 .toggle.reps {
  
