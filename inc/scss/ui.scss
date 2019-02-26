@@ -680,6 +680,11 @@ a.inline-link {
 p.supporting {
 	font-size: .75em;
 	margin: 1em 0;
+	
+	a {
+    	color: white !important;
+    	font-weight: 900 !important;
+	}
 }
 .contact-cta {
 	

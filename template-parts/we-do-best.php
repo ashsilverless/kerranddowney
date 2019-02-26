@@ -62,7 +62,7 @@
 <div class="subscribe final-element">
 <p>Just can’t get enough? Sign up to our newsletter for regular email updates.</p>
 <?php echo do_shortcode('[contact-form-7 id="456" title="Newsletter Form"]');?>
-<p class="supporting">We take your Privacy seriously. Please read our policy here.	</p>
+<p class="supporting">We take your privacy seriously. You can find our <a href="/privacy">policy here.</a>	</p>
 </div>
 
 
