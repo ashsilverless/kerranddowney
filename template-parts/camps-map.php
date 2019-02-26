@@ -11,16 +11,24 @@
 	<?php if( have_rows('map_links', 'option') ): ?>	
 
 	<?php while ( have_rows('map_links', 'option') ) : the_row(); ?>
+	<a href="<?php the_sub_field('button_target'); ?>">
+    	
+        <div class="map-item <?php the_sub_field('camp_name'); ?>" style="top:<?php the_sub_field('top'); ?>%; left:<?php the_sub_field('left'); ?>%;"> 
+            
+            <div class="icon">
+            <span></span>
+            </div>
+        
+            <div class="content">
+                <p><?php the_sub_field('camp_name'); ?></p>
+                <p class="action">Explore</p>
+                <span></span>  
+            </div>
+        
+        </div>
+
+	</a>
 	
-	<div class="map-item <?php the_sub_field('camp_name'); ?>" style="top:<?php the_sub_field('top'); ?>%; left:<?php the_sub_field('left'); ?>%;"> 
-	<div class="icon">
-		<span></span>
-	</div>
-	<p><?php the_sub_field('camp_name'); ?></p>
-	<a href="<?php the_sub_field('button_target'); ?>">Explore
-		<span></span>
-	</a>    
-	</div>
 <?php   endwhile;?>
 
 <?php   endif;?>
