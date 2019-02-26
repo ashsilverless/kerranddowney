@@ -9,7 +9,7 @@
 				<?php // Step 1: Loop through rows, first displaying tab titles
 				while( have_rows('tabs') ): the_row(); //  ?>
 				<li role="presentation" class="<?php if($row == 1) {echo 'active';}?> nav-item">
-					<a href="#<?php echo $row; ?>" role="tab" data-toggle="tab" class="nav-link <?php if($row == 1) {echo 'active';}?>">
+					<a href="#row<?php echo $row; ?>" role="tab" data-toggle="tab" class="nav-link <?php if($row == 1) {echo 'active';}?>">
 						<img src="<?php the_sub_field('image'); ?>"/>
 						<h2><?php the_sub_field('heading'); ?></h2>
 						<div class="thin-arrow"></div>
@@ -31,7 +31,7 @@
 				<?php // Step 2: Loop through rows, now displaying tab contents
 				while( have_rows('tabs') ): the_row();
 				// Display each item as a list ?>
-					<div class="tab-pane fade show <?php if($row == 1) {echo 'active';}?>" id="<?php echo $row; ?>" role="tabpanel">
+					<div class="tab-pane fade show <?php if($row == 1) {echo 'active';}?>" id="row<?php echo $row; ?>" role="tabpanel">
 						<div class="row">
 							<div class="col-sm-7">
 								<h3><?php the_sub_field('heading'); ?></h3>

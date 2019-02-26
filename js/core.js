@@ -99,6 +99,12 @@ $('#checker').change(function(){
         $(this).addClass("active");   
     });
 
+    $(".nav-link").click(function() {   
+      	$('li.nav-item').removeClass("active"); 
+        $(this).closest('.nav-item').addClass("active");   
+    });
+
+
 
 (function($) {
 
