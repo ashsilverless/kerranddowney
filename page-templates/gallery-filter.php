@@ -22,7 +22,7 @@ get_header();?>
 
         <div class="filter-gallery__filter mixitup-camps">
         
-            <a class="control <?php if($term->slug == get_queried_object()->slug) { echo ' active'; } ?> filter__item filter__item--root heading heading__sm" data-filter="all">All</a>
+            <a class="control active filter__item filter__item--root heading heading__sm" data-filter="all">All</a>
         
             <?php 
                 if( have_rows('galleries') ): 
@@ -30,11 +30,12 @@ get_header();?>
                 
                 $images = get_sub_field('gallery');
                 $imageCat = get_sub_field('gallery_category');
+                $imageCatClass = get_sub_field('gallery_category_class');
                 $size = 'full'; 
                 
-                if( $imageCat ): ?>
+                if( $imageCatClass ): ?>
         
-                <a class="control <?php echo $imageCat;?> filter__item heading heading__sm" data-filter=".<?php echo $imageCat;?>">
+                <a class="control <?php echo $imageCatClass;?> filter__item heading heading__sm" data-filter=".<?php echo $imageCatClass;?>">
                     <?php echo $imageCat;?>
                 </a>
         
@@ -54,12 +55,13 @@ get_header();?>
             
             $images = get_sub_field('gallery');
             $imageCat = get_sub_field('gallery_category');
+            $imageCatClass = get_sub_field('gallery_category_class');
             $size = 'full'; 
         
             if( $images ): 
             foreach( $images as $image ): ?>
         
-                <a href="<?php echo $image['url']; ?>" class="mix filter-gallery__item <?php echo $imageCat;?> lodge-gallery"  alt="<?php echo $image['alt']; ?>" style="background-image: url(<?php echo $image['url']; ?>);" data-ref="mixitup-target"></a>
+                <a href="<?php echo $image['url']; ?>" class="mix filter-gallery__item <?php echo $imageCatClass;?> lodge-gallery"  alt="<?php echo $image['alt']; ?>" style="background-image: url(<?php echo $image['url']; ?>);" data-ref="mixitup-target"></a>
         
             <?php endforeach; endif; ?>
                     
