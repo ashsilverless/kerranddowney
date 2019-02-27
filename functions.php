@@ -133,6 +133,9 @@ function slmaster_scripts() {
 	wp_enqueue_script( 'slmaster-bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js', true );
 	
 	wp_enqueue_script( 'slmaster-bootstrap-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', true );
+
+	wp_enqueue_script( 'slmaster-mix', get_template_directory_uri() . '/js/mixitup.js', true );
+
 	
 	wp_enqueue_script( 'slmaster-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -161,6 +164,7 @@ add_action( 'wp_enqueue_scripts', 'sl_owl_assets' );
 function sl_core_js() {
 	
 	wp_enqueue_script( 'sl-core-js', get_template_directory_uri() . '/js/core.js', array(), true );
+		wp_enqueue_script( 'slmaster-pop', get_template_directory_uri() . '/js/jquery.magnific-popup.js', true );
 }
 add_action( 'wp_enqueue_scripts', 'sl_core_js' );
 

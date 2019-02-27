@@ -6,6 +6,12 @@
 	background-repeat: no-repeat;
 }
 
+@mixin backgroundCover {
+	background-size: cover !important; /* !important added as result of rule not working inside display:grid */
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+}
+
 @mixin fifty-height {
 	min-height: 50vh;
 	height:50vh;

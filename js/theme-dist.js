@@ -225,6 +225,18 @@ jQuery(document).ready(function ($) {
 		}
 	});
 
+	// ========== Controller for lightbox elements
+
+	$(document).ready(function () {
+
+		$('.lodge-gallery').magnificPopup({
+			type: 'image',
+			gallery: {
+				enabled: true
+			}
+		});
+	});
+
 	/* CLASS AND FOCUS ON CLICK */
 
 	$(".nav-trigger").click(function () {
