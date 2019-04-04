@@ -671,6 +671,20 @@ a.inline-link {
 		    background: red;
 	    }
 	}
+	
+    .alert-warning {
+        color: hsl(0, 0%, 100%);
+        background-color: hsla(0, 0%, 0%, 0);
+        border: none !important;
+        padding: 1em 0;
+    }
+
+    .wpcf7-validation-errors.alert {
+        background: hsl(0, 80%, 57%);
+        padding: 1em;
+        border-radius: 0;
+    }
+
 }
 
 .thin-arrow {
