@@ -131,11 +131,15 @@
 
 /* == 404 == */
 
+body.error404 .nav-trigger {
+    display: none;
+}
+
 .error-section {
     @include backgroundCover;
     display: grid;
     justify-content: center;
-    height:75vh; 
+    height:100vh; 
     background:url(inc/img/404.jpg);
     
     h1 {

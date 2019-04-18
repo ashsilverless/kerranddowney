@@ -33,6 +33,3 @@ get_header();
 
 </div><!--c-->
 
-
-<?php
-get_footer();
