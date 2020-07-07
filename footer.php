@@ -6,58 +6,65 @@
 
 	</div><!-- #main -->
 
-	<?php get_template_part( 'template-parts/camp', 'navigator' );?>	
+	<?php get_template_part( 'template-parts/camp', 'navigator' );?>
 
 	<footer id="colophon" class="site-footer">
-		<?php get_template_part( 'template-parts/camps', 'map' );?>	
+		<?php get_template_part( 'template-parts/camps', 'map' );?>
 <div class="main-form">
 	<div class="container">
 
 		<div class="row">
-			
+
 				<div class="col-sm-4 offset-sm-2">
-					<a href="tel:+267 686 1282" class="button trans-li med fullwidth">+267 686 1282</a>
+					<a href="tel:+267 686 1282" class="button trans-li med fullwidth mb2">+267 686 1282</a>
+					<a href="mailto:info@kerdowney.bw" class="button trans-li med fullwidth mb5">info@kerdowney.bw</a>
 				</div>
-				
+
 				<div class="col-sm-4">
-					<a href="mailto:info@kerdowney.bw" class="button trans-li med fullwidth">info@kerdowney.bw</a>			
-				</div>				
-			
+					<div class="newsletter-subscribe">
+						<?php echo do_shortcode('[contact-form-7 id="455" title="Contact Page Form"]');?>
+					</div>
+				</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-6 offset-3">
+				<div class="accreds">
+				<?php if( have_rows('accreditations', 'option') ): ?>
+						<?php while ( have_rows('accreditations', 'option') ) : the_row(); ?>
+							<img src="<?php the_sub_field('image'); ?>" />
+						<?php   endwhile;?>
+					<?php   endif;?>
+				</div>
+			</div>
+
 		</div>
 
 
-	<?php echo do_shortcode('[contact-form-7 id="583" title="test"]');?>
 
 <div class="row justify-content-center">
 
-		<?php if( have_rows('accreditations', 'option') ): ?>	
-		
-				<?php while ( have_rows('accreditations', 'option') ) : the_row(); ?>
-		        <div class="col-md-1 col-2">
-					<img src="<?php the_sub_field('image'); ?>" />
-		        </div>
-				<?php   endwhile;?>
-				
-			<?php   endif;?>
+
 </div>
 		</div>
 	</div>
 
-<div class="socket">		
+<div class="socket">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6 offset-sm-3">
 				<a href="/terms" class="mandatory">T&C</a>
-				<a href="/privacy" class="mandatory">Privacy</a>					
+				<a href="/privacy" class="mandatory">Privacy</a>
 				&copy; Ker & Downey Botswana <?php echo date ('Y');?>
-				<div class="footer-social">		
-					<?php get_template_part( 'template-parts/social', 'links' );?>	
+				<div class="footer-social">
+					<?php get_template_part( 'template-parts/social', 'links' );?>
 				</div>
 				<div class="credit">
 					<a href="https://silverless.co.uk/" target="_blank" rel="noopener">By Silverless</a></div>
 				</div>
 		</div>
-	</div>	
+	</div>
 </div><!--socket-->
 
 </footer><!-- #colophon -->

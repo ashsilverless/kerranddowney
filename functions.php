@@ -102,7 +102,7 @@ add_action( 'after_setup_theme', 'slmaster_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 // Add scripts to wp_head()
-function slmaster_theme_head_script() {?> 
+function slmaster_theme_head_script() {?>
 
 <?php }
 add_action( 'wp_head', 'slmaster_theme_head_script' ); 
@@ -163,7 +163,7 @@ add_action( 'wp_enqueue_scripts', 'sl_owl_assets' );
 
 function sl_core_js() {
 	
-	wp_enqueue_script( 'sl-core-js', get_template_directory_uri() . '/js/core.js', array(), true );
+	wp_enqueue_script( 'sl-core-js', get_template_directory_uri() . '/js/core.js', array(), '2', true );
 		wp_enqueue_script( 'slmaster-pop', get_template_directory_uri() . '/js/jquery.magnific-popup.js', true );
 }
 add_action( 'wp_enqueue_scripts', 'sl_core_js' );
@@ -327,11 +327,14 @@ function custom_dashboard_help() {
 ?>
 
 <img src="https://silverless.co.uk/wp-content/themes/silverless/images/logo__silverless.svg" style="max-width:100%;
-height:auto;"/>
+height:auto;" />
 
-<img src="https://silverless.co.uk/wp-content/uploads/2016/10/icon-screen-delete.svg" style=" display: inline-block; width: 60px; margin: 2em calc(50% - 30px) 1em;"/>
+<img src="https://silverless.co.uk/wp-content/uploads/2016/10/icon-screen-delete.svg"
+    style=" display: inline-block; width: 60px; margin: 2em calc(50% - 30px) 1em;" />
 
-<p>For support or general enquiries please contact us directly at <a href="mailto:hello@silverless.co.uk">hello@silverless.co.uk</a> or call <a href="tel:+44 (0)1672 556532">01672 556532</a></p>
+<p>For support or general enquiries please contact us directly at <a
+        href="mailto:hello@silverless.co.uk">hello@silverless.co.uk</a> or call <a href="tel:+44 (0)1672 556532">01672
+        556532</a></p>
 <p>We aim to respond within 60 minutes during hours (Mon to Fri 9am - 5pm)</p>
 
 <?php
@@ -398,5 +401,13 @@ body.post-type-page div#postdivrich {
 }
 
 
+/**
+ * Social media share buttons
+ */
+function wcr_share_buttons() {
+    $url = urlencode(get_the_permalink());
+    $title = urlencode(html_entity_decode(get_the_title(), ENT_COMPAT, 'UTF-8'));
+    $media = urlencode(get_the_post_thumbnail_url(get_the_ID(), 'full'));
 
-
+    include( locate_template('template-parts/share-template.php', false, false) );
+}

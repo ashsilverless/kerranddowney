@@ -1,68 +1,75 @@
 /*! == TYPOGRAPHY == */
 
-h1, h2, h3, h4, h5, h6 { 
-	color: $sl-text-color;
-	font-family: $heading-font;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $sl-text-color;
+  font-family: $heading-font;
 }
 
-.h2, h2 {
-    font-size: 1.6em;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    margin-top: 1em;
+.h2,
+h2 {
+  font-size: 1.6em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 1em;
 }
-	
-p { 
-	color: $sl-text-color;
-	font-family: $body-font;
-	font-size: 1em;
+
+p {
+  color: $sl-text-color;
+  font-family: $body-font;
+  font-size: 1em;
 }
 
 p strong {
-	font-weight: 900;
+  font-weight: 900;
 }
 
 p + strong {
-	margin-bottom: .5em
+  margin-bottom: 0.5em;
 }
 
-a { 
-	color: $sl-theme-tertiary;
+a {
+  color: $sl-theme-tertiary;
 }
 
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 body {
-	font-family: $body-font;
-	font-size: 13px;
-	font-weight: 100;
+  font-family: $body-font;
+  font-size: 13px;
+  font-weight: 100;
 }
 
 h3 {
-	margin: 1.5em 0 .5em;
-	font-size: 1.3em;
-	text-transform: uppercase;
-	letter-spacing: 2px;
+  margin: 1.5em 0 0.5em;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 p + h3 {
-    margin-top: 3em;
+  margin-top: 3em;
 }
 
 h4 {
-	font-size: 1.5em;
-	border-bottom: 1px solid hsl(0, 0%, 100%);
-	padding-bottom: .5em;
-	margin-bottom: 1em;
+  font-size: 1.5em;
+  border-bottom: 1px solid hsl(0, 0%, 100%);
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
-p + h4, 
+p + h4,
 ul + h4 {
-    margin-top: 2em;
+  margin-top: 2em;
 }
-
-
-
-
+.heading {
+  text-align: justify;
+  margin: 3rem 0 2rem;
+  font-weight: 600;
+}
