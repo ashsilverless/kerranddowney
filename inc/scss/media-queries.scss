@@ -108,6 +108,11 @@ body {
 	display: none;
 }
 
+.sl-hero.full {
+  max-height: 75vh;
+  justify-content: flex-end;
+}
+
 .sl-hero.one-third {
 	justify-content: flex-end;
 }
