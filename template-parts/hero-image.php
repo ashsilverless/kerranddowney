@@ -8,7 +8,7 @@
         <?php if( get_field('alert_button_text') ): ?>
         <div class="alert-link">
             <a href="<?php the_field('alert_link');?>"
-                class="button trans-li med"><?php the_field('alert_button_text');?><span></span></a>
+                class="button-alert"><?php the_field('alert_button_text');?><span></span></a>
         </div>
         <?php endif; ?>
     </div>

@@ -83,7 +83,21 @@ get_header();
                         <?php endif; ?>
 
 
+                        <?php 
+$images = get_sub_field('stan_gallery_images');
+if( $images ): ?>
+                        <div class="gallery stan-gallery">
 
+                            <?php foreach( $images as $image ): ?>
+                            <a href="<?php echo $image['url']; ?>" class="lightbox-gallery"
+                                alt="<?php echo $image['alt']; ?>"
+                                style="background-image: url(<?php echo $image['url']; ?>); "><img
+                                    src="<?php echo $image['url']; ?>" />
+                            </a>
+                            <?php endforeach; ?>
+
+                        </div>
+                        <?php endif; ?>
 
 
 
