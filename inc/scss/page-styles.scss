@@ -317,6 +317,7 @@ body.error404 .nav-trigger {
 .alert-link {
   margin-top: 6rem;
   a {
+    display: inline-block;
     color: white;
     background: $sl-theme-primary;
     font-size: 1.3em;
